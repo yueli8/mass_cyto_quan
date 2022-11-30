@@ -49,9 +49,9 @@ plotNRS(sce, features = "type", color_by = "condition")
 set.seed(1234)
 sce <- cluster(sce, features = "type",
                xdim = 10, ydim = 10, maxK = 20, seed = 1234)
-#plotExprHeatmap(sce, features = "type", 
-#                by = "cluster_id", k = "meta20", 
-#               bars = TRUE, perc = TRUE)
+plotExprHeatmap(sce, features = "type", 
+                by = "cluster_id", k = "meta20", 
+               bars = TRUE, perc = TRUE)
 plotClusterExprs(sce, k = "meta20", features = "type")
 
 #plotMultiHeatmap(sce, 
